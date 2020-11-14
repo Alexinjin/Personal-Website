@@ -1,0 +1,86 @@
+@Profile: Profile;
+
+.@{Profile}-wrapper {
+  height: 430px;
+  .@{Profile} {
+    padding: 64px 24px 0px 24px;
+    display: flex;
+    align-items: flex-end;
+    .banner-anim {
+      width: 100%;
+      height: 100%;
+    }
+    .banner-anim-thumb {
+      span {
+        background: #e9e9e9;
+        box-shadow: none;
+        &.active {
+          background: @primary-color;
+        }
+      }
+    }
+    & .queue-anim-leaving {
+      position: relative !important;
+    }
+
+    &-banner-user-elem {
+      height: 100%;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    &-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 100%;
+      overflow: hidden;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 24px;
+      img {
+        height: 110%;
+      }
+    }
+    &-logo {
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 24px;
+      a {
+        height: 100%;
+        img{
+          height: 50%;
+        }
+      }
+    }
+    &-content {
+      font-size: 12px;
+      color: #919191;
+      text-align: center;
+      width: 80%;
+      margin: 8px auto;
+    }
+    &-h1 {
+      font-size: 24px;
+      text-align: center;
+      width: 80%;
+      margin: 24px auto 0;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{Profile}-wrapper {
+    min-height: 480px;
+
+    .@{Profile} {
+      display: block;
+    }
+  }
+}
